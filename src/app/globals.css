@@ -359,6 +359,38 @@ section {
   font-weight: 600;
 }
 
+.timelineGrid {
+  margin-top: 20px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.timelineCard {
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(24, 228, 234, 0.24);
+  background: rgba(3, 52, 57, 0.76);
+}
+
+.timelineDate {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.timelineCard h3 {
+  margin-top: 8px;
+  font-size: 1.02rem;
+}
+
+.timelineCard p {
+  margin-top: 10px;
+  color: var(--color-text-dim);
+}
+
 .cardGrid {
   margin-top: 20px;
   display: grid;
@@ -396,6 +428,36 @@ section {
 
 .singleCard {
   margin-top: 18px;
+}
+
+.venueGrid {
+  margin-top: 8px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.faqGrid {
+  margin-top: 18px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.faqCard {
+  border-radius: 16px;
+  border: 1px solid rgba(24, 228, 234, 0.22);
+  padding: 16px;
+  background: rgba(3, 50, 54, 0.74);
+}
+
+.faqCard h3 {
+  font-size: 1rem;
+}
+
+.faqCard p {
+  margin-top: 10px;
+  color: var(--color-text-dim);
 }
 
 @keyframes floatPulse {

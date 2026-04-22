@@ -27,6 +27,7 @@ export default function Home() {
           <a href="#rulebooks">Rulebooks</a>
           <a href="#kits">Prize & Kits</a>
           <a href="#venue">Venue</a>
+          <a href="#faq">FAQ</a>
         </nav>
       </header>
 
@@ -140,18 +141,31 @@ export default function Home() {
 
         <section id="schedule" className="sectionBlock">
           <h2>Time & Registration</h2>
-          <div className="cardGrid">
-            <article className="infoCard">
-              <h3>Key Deadline</h3>
-              <p>Last date of registration: 24 April, 2026</p>
-              <p>Team size: up to 3 members</p>
-              <p>Fee: 900 BDT per team</p>
+          <p className="sectionLead">Important milestones to keep your team registration and preparation on track.</p>
+
+          <div className="timelineGrid">
+            <article className="timelineCard">
+              <p className="timelineDate">24 April, 2026</p>
+              <h3>Registration Deadline</h3>
+              <p>Final date to submit team registration for both events.</p>
             </article>
-            <article className="infoCard">
-              <h3>Event Flow</h3>
-              <p>30 April: Code Kachal contest day</p>
-              <p>1 May: HackSpark hackathon day</p>
-              <p>Detailed timeline will be added in Phase 3.</p>
+
+            <article className="timelineCard">
+              <p className="timelineDate">30 April, 2026 | Thursday</p>
+              <h3>Code Kachal Contest Day</h3>
+              <p>Intra RUET programming contest for series 21-24 from all departments.</p>
+            </article>
+
+            <article className="timelineCard">
+              <p className="timelineDate">1 May, 2026 | Friday</p>
+              <h3>HackSpark Main Day</h3>
+              <p>Hackathon project sprint, evaluation, and winner selection.</p>
+            </article>
+
+            <article className="timelineCard">
+              <p className="timelineDate">Team Policy</p>
+              <h3>Team Size & Fee</h3>
+              <p>Up to 3 members per team. Registration fee is 900 BDT per team.</p>
             </article>
           </div>
         </section>
@@ -203,10 +217,49 @@ export default function Home() {
 
         <section id="venue" className="sectionBlock">
           <h2>Place & Contact</h2>
-          <article className="infoCard singleCard">
-            <p>Venue details and organizer contact blocks will be integrated in Phase 3.</p>
-            <p>Current build is the approved structural foundation for your one-page site.</p>
-          </article>
+
+          <div className="venueGrid">
+            <article className="infoCard singleCard">
+              <h3>Venue</h3>
+              <p>Rajshahi University of Engineering & Technology (RUET), Rajshahi.</p>
+              <p>Specific room-wise seating and reporting points will be announced by organizers before event day.</p>
+              <a href="https://maps.google.com/?q=RUET%20Rajshahi" target="_blank" rel="noopener noreferrer">
+                Open RUET on Map
+              </a>
+            </article>
+
+            <article className="infoCard singleCard">
+              <h3>Organizer Desk</h3>
+              <p>For registration support and event communication, contact the ECE Technocracy organizing panel.</p>
+              <p>Official contact numbers and helpdesk links will be published soon.</p>
+              <a href="#home">Back To Top</a>
+            </article>
+          </div>
+        </section>
+
+        <section id="faq" className="sectionBlock">
+          <h2>FAQ</h2>
+          <div className="faqGrid">
+            <article className="faqCard">
+              <h3>Can I join both events?</h3>
+              <p>Yes. You can register for Code Kachal, HackSpark, or both if your team meets eligibility requirements.</p>
+            </article>
+
+            <article className="faqCard">
+              <h3>Who can participate?</h3>
+              <p>Code Kachal is for all departments, series 21-24. HackSpark is for all departments, series 20-24.</p>
+            </article>
+
+            <article className="faqCard">
+              <h3>How many members are allowed?</h3>
+              <p>Each team can have up to 3 members.</p>
+            </article>
+
+            <article className="faqCard">
+              <h3>What does each participant get?</h3>
+              <p>Participation certificate, official event t-shirt, snacks and lunch, and a 10% Callisto discount coupon.</p>
+            </article>
+          </div>
         </section>
       </main>
     </>
