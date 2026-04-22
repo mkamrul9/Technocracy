@@ -1,15 +1,16 @@
-import { Orbitron, Rajdhani } from "next/font/google";
+import { Chakra_Petch, Share_Tech_Mono } from "next/font/google";
 import ScrollReveal from "@/components/ScrollReveal";
 import "./globals.css";
 
-const orbitron = Orbitron({
+const orbitron = Chakra_Petch({
   variable: "--font-orbitron",
+  weight: ["500", "600", "700"],
   subsets: ["latin"],
 });
 
-const rajdhani = Rajdhani({
+const rajdhani = Share_Tech_Mono({
   variable: "--font-rajdhani",
-  weight: ["400", "500", "600", "700"],
+  weight: "400",
   subsets: ["latin"],
 });
 

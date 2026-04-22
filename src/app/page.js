@@ -32,8 +32,8 @@ export default function Home() {
         url: CODE_REGISTRATION_LINK,
         location: {
           "@type": "Place",
-          name: "RUET",
-          address: "Rajshahi University of Engineering & Technology, Rajshahi, Bangladesh",
+          name: "CSE Building, RUET",
+          address: "CSE Building, Rajshahi University of Engineering & Technology, Rajshahi, Bangladesh",
         },
         organizer: {
           "@type": "Organization",
@@ -51,8 +51,8 @@ export default function Home() {
         url: HACK_REGISTRATION_LINK,
         location: {
           "@type": "Place",
-          name: "RUET",
-          address: "Rajshahi University of Engineering & Technology, Rajshahi, Bangladesh",
+          name: "CSE Building, RUET",
+          address: "CSE Building, Rajshahi University of Engineering & Technology, Rajshahi, Bangladesh",
         },
         organizer: {
           "@type": "Organization",
@@ -66,6 +66,11 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      <div className="ambientBackdrop" aria-hidden="true">
+        <span className="glow glowOne" />
+        <span className="glow glowTwo" />
+        <span className="glow glowThree" />
+      </div>
       <header className="topNav">
         <a href="#home" className="brand">
           Technocracy 2026
@@ -129,7 +134,7 @@ export default function Home() {
             <article className="eventCard codeCard" data-reveal>
               <div className="eventHeader">
                 <p className="eventTag">Programming Contest</p>
-                <p className="eventDate">30 April, 2026 | Thursday</p>
+                <p className="eventDate">Date: <span className="importantDate">30 April, 2026</span> | Thursday</p>
               </div>
               <h3>Code Kachal</h3>
               <ul>
@@ -155,7 +160,7 @@ export default function Home() {
             <article className="eventCard hackCard" data-reveal>
               <div className="eventHeader">
                 <p className="eventTag">Hackathon</p>
-                <p className="eventDate">1 May, 2026 | Friday</p>
+                <p className="eventDate">Date: <span className="importantDate">1 May, 2026</span> | Friday</p>
               </div>
               <h3>HackSpark</h3>
               <ul>
@@ -191,22 +196,23 @@ export default function Home() {
         <section id="schedule" className="sectionBlock" data-reveal>
           <h2>Time & Registration</h2>
           <p className="sectionLead">Important milestones to keep your team registration and preparation on track.</p>
+          <p className="importantLine">Registration closes on <span className="importantDate">24 April, 2026</span></p>
 
           <div className="timelineGrid">
             <article className="timelineCard" data-reveal>
-              <p className="timelineDate">24 April, 2026</p>
+              <p className="timelineDate"><span className="importantDate">24 April, 2026</span></p>
               <h3>Registration Deadline</h3>
               <p>Final date to submit team registration for both events.</p>
             </article>
 
             <article className="timelineCard" data-reveal>
-              <p className="timelineDate">30 April, 2026 | Thursday</p>
+              <p className="timelineDate"><span className="importantDate">30 April, 2026</span> | Thursday</p>
               <h3>Code Kachal Contest Day</h3>
               <p>Intra RUET programming contest for series 21-24 from all departments.</p>
             </article>
 
             <article className="timelineCard" data-reveal>
-              <p className="timelineDate">1 May, 2026 | Friday</p>
+              <p className="timelineDate"><span className="importantDate">1 May, 2026</span> | Friday</p>
               <h3>HackSpark Main Day</h3>
               <p>Hackathon project sprint, evaluation, and winner selection.</p>
             </article>
@@ -247,19 +253,26 @@ export default function Home() {
 
         <section id="kits" className="sectionBlock" data-reveal>
           <h2>Prize & Participant Kits</h2>
-          <div className="cardGrid">
-            <article className="infoCard" data-reveal>
+          <div className="cardGrid kitGrid">
+            <article className="infoCard participantCard" data-reveal>
               <h3>For Each Participant</h3>
-              <ul>
-                <li>Participation certificate</li>
-                <li>Official event t-shirt and additional kits</li>
-                <li>Snacks and lunch</li>
-                <li>10% discount coupon from Callisto</li>
-              </ul>
+              <p className="kitLead">Every registered member receives a complete participant package.</p>
+              <div className="kitPillWrap">
+                <span className="kitPill">Participation Certificate</span>
+                <span className="kitPill">Official Event T-shirt</span>
+                <span className="kitPill">Snacks & Lunch</span>
+                <span className="kitPill">10% Callisto Coupon</span>
+              </div>
             </article>
-            <article className="infoCard" data-reveal>
+
+            <article className="infoCard winnerCard" data-reveal>
               <h3>For Winning Teams</h3>
-              <p>Crests and trophies for champion teams.</p>
+              <p className="kitLead">Top teams receive official recognition and premium rewards.</p>
+              <div className="winnerRow">
+                <span className="winnerTag">Crest</span>
+                <span className="winnerTag">Trophy</span>
+                <span className="winnerTag">Champion Honor</span>
+              </div>
             </article>
           </div>
         </section>
@@ -270,10 +283,10 @@ export default function Home() {
           <div className="venueGrid">
             <article className="infoCard singleCard" data-reveal>
               <h3>Venue</h3>
-              <p>Rajshahi University of Engineering & Technology (RUET), Rajshahi.</p>
-              <p>Specific room-wise seating and reporting points will be announced by organizers before event day.</p>
-              <a href="https://maps.google.com/?q=RUET%20Rajshahi" target="_blank" rel="noopener noreferrer">
-                Open RUET on Map
+              <p><span className="importantDate">CSE Building, RUET</span>, Rajshahi.</p>
+              <p>Specific room-wise seating and reporting points will be announced before event day.</p>
+              <a href="https://maps.google.com/?q=CSE%20Building%20RUET" target="_blank" rel="noopener noreferrer">
+                Open CSE Building on Map
               </a>
             </article>
 
@@ -311,6 +324,45 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <footer className="siteFooter" data-reveal>
+        <div className="footerInner">
+          <div className="footerBrandBlock">
+            <p className="footerEyebrow">ECE, RUET</p>
+            <h3>Technocracy 2026</h3>
+            <p>Code Kachal and HackSpark for innovators, builders, and problem-solvers.</p>
+          </div>
+
+          <div className="footerLinksBlock">
+            <p className="footerTitle">Quick Links</p>
+            <a href={CODE_REGISTRATION_LINK} target="_blank" rel="noopener noreferrer">
+              Code Kachal Registration
+            </a>
+            <a href={HACK_REGISTRATION_LINK} target="_blank" rel="noopener noreferrer">
+              HackSpark Registration
+            </a>
+            <a href={CODE_RULEBOOK_LINK} target="_blank" rel="noopener noreferrer">
+              Code Kachal Rulebook
+            </a>
+            <a href={HACK_RULEBOOK_LINK} target="_blank" rel="noopener noreferrer">
+              HackSpark Rulebook
+            </a>
+          </div>
+
+          <div className="footerInfoBlock">
+            <p className="footerTitle">Event Info</p>
+            <p>Venue: CSE Building, RUET</p>
+            <p>Registration Deadline: <span className="importantDate">24 April, 2026</span></p>
+            <p>Team Size: Up to 3 Members</p>
+            <p>Fee: 900 BDT / Team</p>
+          </div>
+        </div>
+
+        <div className="footerBottom">
+          <p>© 2026 Technocracy. All rights reserved.</p>
+          <a href="#home">Back to top</a>
+        </div>
+      </footer>
     </>
   );
 }
