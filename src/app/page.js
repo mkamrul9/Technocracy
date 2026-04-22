@@ -1,4 +1,9 @@
 const REGISTRATION_DEADLINE = "2026-04-24T23:59:59+06:00";
+const CODE_REGISTRATION_LINK = "https://forms.gle/xhghADXrngrKxhUCA";
+const HACK_REGISTRATION_LINK = "https://forms.gle/LMXuQvZLcMRRWJHA6";
+const CODE_RULEBOOK_LINK = "https://drive.google.com/file/d/193Eb3jryGxNZusZviioP112IHe-4H-fX/view";
+const HACK_RULEBOOK_LINK = "https://drive.google.com/file/d/1jb5QxWS96kKgWUMVrtelXgTg8U7MsiEc/view";
+const SITE_URL = "https://technocracy2026.vercel.app";
 
 function getDaysLeft(deadlineIso) {
   const now = new Date();
@@ -14,9 +19,53 @@ function getDaysLeft(deadlineIso) {
 
 export default function Home() {
   const daysLeft = getDaysLeft(REGISTRATION_DEADLINE);
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Event",
+        name: "Code Kachal",
+        startDate: "2026-04-30T09:00:00+06:00",
+        endDate: "2026-04-30T18:00:00+06:00",
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        eventStatus: "https://schema.org/EventScheduled",
+        url: CODE_REGISTRATION_LINK,
+        location: {
+          "@type": "Place",
+          name: "RUET",
+          address: "Rajshahi University of Engineering & Technology, Rajshahi, Bangladesh",
+        },
+        organizer: {
+          "@type": "Organization",
+          name: "ECE, RUET",
+          url: SITE_URL,
+        },
+      },
+      {
+        "@type": "Event",
+        name: "HackSpark",
+        startDate: "2026-05-01T09:00:00+06:00",
+        endDate: "2026-05-01T21:00:00+06:00",
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        eventStatus: "https://schema.org/EventScheduled",
+        url: HACK_REGISTRATION_LINK,
+        location: {
+          "@type": "Place",
+          name: "RUET",
+          address: "Rajshahi University of Engineering & Technology, Rajshahi, Bangladesh",
+        },
+        organizer: {
+          "@type": "Organization",
+          name: "ECE, RUET",
+          url: SITE_URL,
+        },
+      },
+    ],
+  };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <header className="topNav">
         <a href="#home" className="brand">
           Technocracy 2026
@@ -89,12 +138,12 @@ export default function Home() {
                 <li>Fast-paced algorithmic challenge format</li>
               </ul>
               <div className="eventActions">
-                <a className="btnMini" href="https://forms.gle/xhghADXrngrKxhUCA" target="_blank" rel="noopener noreferrer">
+                <a className="btnMini" href={CODE_REGISTRATION_LINK} target="_blank" rel="noopener noreferrer">
                   Register
                 </a>
                 <a
                   className="btnMiniGhost"
-                  href="https://drive.google.com/file/d/193Eb3jryGxNZusZviioP112IHe-4H-fX/view?fbclid=IwY2xjawRVl9FleHRuA2FlbQIxMABicmlkETFvVDI4YUVsNjZIMVdlSHNxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHrn6muQKq1Yf_qQxfUaCi5y_iRbhkFOoRoJ_hOn9vZn_lmJ5lMiccxfFhzOA_aem_HXRM-lsEXqs5kGnLKMOAAg"
+                  href={CODE_RULEBOOK_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -115,12 +164,12 @@ export default function Home() {
                 <li>Prototype and pitch problem-solving ideas</li>
               </ul>
               <div className="eventActions">
-                <a className="btnMini" href="https://forms.gle/LMXuQvZLcMRRWJHA6" target="_blank" rel="noopener noreferrer">
+                <a className="btnMini" href={HACK_REGISTRATION_LINK} target="_blank" rel="noopener noreferrer">
                   Register
                 </a>
                 <a
                   className="btnMiniGhost"
-                  href="https://drive.google.com/file/d/1jb5QxWS96kKgWUMVrtelXgTg8U7MsiEc/view?fbclid=IwY2xjawRVmAlleHRuA2FlbQIxMABicmlkETE3RGVyS3lRMXVSbDdKejR4c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHiefmkeLDWV2pUti3o1WB1n1zF3Yn7Ibl_pvBF22HGugT_oRpry-KtgjOunE_aem_Jl7fAuTB_QDuOIqsos-w_g"
+                  href={HACK_RULEBOOK_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -176,7 +225,7 @@ export default function Home() {
             <article className="infoCard" data-reveal>
               <h3>Code Kachal Rulebook</h3>
               <a
-                href="https://drive.google.com/file/d/193Eb3jryGxNZusZviioP112IHe-4H-fX/view?fbclid=IwY2xjawRVl9FleHRuA2FlbQIxMABicmlkETFvVDI4YUVsNjZIMVdlSHNxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHrn6muQKq1Yf_qQxfUaCi5y_iRbhkFOoRoJ_hOn9vZn_lmJ5lMiccxfFhzOA_aem_HXRM-lsEXqs5kGnLKMOAAg"
+                href={CODE_RULEBOOK_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -186,7 +235,7 @@ export default function Home() {
             <article className="infoCard" data-reveal>
               <h3>HackSpark Rulebook</h3>
               <a
-                href="https://drive.google.com/file/d/1jb5QxWS96kKgWUMVrtelXgTg8U7MsiEc/view?fbclid=IwY2xjawRVmAlleHRuA2FlbQIxMABicmlkETE3RGVyS3lRMXVSbDdKejR4c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHiefmkeLDWV2pUti3o1WB1n1zF3Yn7Ibl_pvBF22HGugT_oRpry-KtgjOunE_aem_Jl7fAuTB_QDuOIqsos-w_g"
+                href={HACK_RULEBOOK_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
               >

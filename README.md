@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Technocracy 2026 Website
 
-## Getting Started
+One-page event website for Technocracy 2026 (ECE, RUET) built with Next.js App Router.
 
-First, run the development server:
+## Features
+
+- Vibrant poster-inspired UI based on Technocracy branding
+- Event sections for Code Kachal and HackSpark
+- Registration links and rulebook links
+- Timeline, venue, participant benefits, and FAQ
+- Scroll reveal animation with reduced-motion support
+- SEO-ready metadata, sitemap, robots, and social card image
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- App Router (src/app)
+- CSS (custom tokens and components)
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Quality Checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+### Vercel (recommended)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Import this repository into Vercel.
+2. Framework preset: Next.js (auto-detected).
+3. Deploy.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## SEO Notes
 
-## Deploy on Vercel
+- Update `metadataBase` in src/app/layout.js to your final production domain.
+- `sitemap.xml` and `robots.txt` are generated from:
+	- src/app/sitemap.js
+	- src/app/robots.js
+- Social preview image is generated at src/app/opengraph-image.js
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- src/app/page.js: Main one-page content
+- src/app/globals.css: Global styles and animation system
+- src/components/ScrollReveal.jsx: IntersectionObserver reveal helper
