@@ -1,4 +1,20 @@
+const REGISTRATION_DEADLINE = "2026-04-24T23:59:59+06:00";
+
+function getDaysLeft(deadlineIso) {
+  const now = new Date();
+  const deadline = new Date(deadlineIso);
+  const diff = deadline.getTime() - now.getTime();
+
+  if (diff <= 0) {
+    return 0;
+  }
+
+  return Math.ceil(diff / (1000 * 60 * 60 * 24));
+}
+
 export default function Home() {
+  const daysLeft = getDaysLeft(REGISTRATION_DEADLINE);
+
   return (
     <>
       <header className="topNav">
@@ -16,42 +32,109 @@ export default function Home() {
 
       <main>
         <section id="home" className="hero sectionBlock">
-          <p className="kicker">ECE Presents</p>
-          <h1>Technocracy 2026</h1>
-          <p className="heroSub">
-            One stage. Two signature events. Competitive programming and hackathon for innovators across departments.
-          </p>
-          <div className="heroCtaRow">
-            <a className="btnPrimary" href="#events">
-              Explore Events
-            </a>
-            <a className="btnGhost" href="#rulebooks">
-              View Rulebooks
-            </a>
+          <div className="binaryRain" aria-hidden="true">
+            010101 001101 111000 100101 001011 010110 110010 000111 101001 011100
+          </div>
+          <div className="heroGrid">
+            <div className="heroCopy">
+              <p className="kicker">ECE Presents</p>
+              <h1>
+                TECHNOC<span>RACY</span> 2026
+              </h1>
+              <p className="heroSub">
+                The flagship intra-university tech festival featuring Code Kachal and HackSpark. Built for problem solvers,
+                makers, and future builders.
+              </p>
+
+              <div className="heroStats" aria-label="Key registration details">
+                <span>Registration Deadline: 24 April</span>
+                <span>Max Team Size: 3 Members</span>
+                <span>Fee: 900 BDT / Team</span>
+              </div>
+
+              <div className="heroCtaRow">
+                <a className="btnPrimary" href="#events">
+                  Explore Events
+                </a>
+                <a className="btnGhost" href="#rulebooks">
+                  View Rulebooks
+                </a>
+              </div>
+            </div>
+
+            <aside className="countdownCard" aria-label="Registration countdown">
+              <p className="countLabel">Only</p>
+              <p className="countNumber">{daysLeft}</p>
+              <p className="countLabel">Days Left</p>
+              <p className="countMeta">for registration close</p>
+            </aside>
           </div>
         </section>
 
         <section id="events" className="sectionBlock">
-          <h2>Competition Section</h2>
-          <p className="sectionLead">Phase 1 structure is ready. Detailed visual cards and motion will be added in Phase 2.</p>
-          <div className="cardGrid">
-            <article className="infoCard">
-              <h3>Code Kachal (Programming Contest)</h3>
-              <p>Date: 30 April, 2026 (Thursday)</p>
-              <p>Eligibility: All departments, series 21-24</p>
-              <a href="https://forms.gle/xhghADXrngrKxhUCA" target="_blank" rel="noopener noreferrer">
-                Registration Link
-              </a>
+          <h2>Competition Tracks</h2>
+          <p className="sectionLead">Two events, one platform. Join a focused coding contest or ship solutions in a full hackathon sprint.</p>
+
+          <div className="eventGrid">
+            <article className="eventCard codeCard">
+              <div className="eventHeader">
+                <p className="eventTag">Programming Contest</p>
+                <p className="eventDate">30 April, 2026 | Thursday</p>
+              </div>
+              <h3>Code Kachal</h3>
+              <ul>
+                <li>Open for all departments, series 21-24</li>
+                <li>Team size: up to 3 members</li>
+                <li>Fast-paced algorithmic challenge format</li>
+              </ul>
+              <div className="eventActions">
+                <a className="btnMini" href="https://forms.gle/xhghADXrngrKxhUCA" target="_blank" rel="noopener noreferrer">
+                  Register
+                </a>
+                <a
+                  className="btnMiniGhost"
+                  href="https://drive.google.com/file/d/193Eb3jryGxNZusZviioP112IHe-4H-fX/view?fbclid=IwY2xjawRVl9FleHRuA2FlbQIxMABicmlkETFvVDI4YUVsNjZIMVdlSHNxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHrn6muQKq1Yf_qQxfUaCi5y_iRbhkFOoRoJ_hOn9vZn_lmJ5lMiccxfFhzOA_aem_HXRM-lsEXqs5kGnLKMOAAg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Rulebook
+                </a>
+              </div>
             </article>
 
-            <article className="infoCard">
-              <h3>HackSpark (Hackathon)</h3>
-              <p>Date: 1 May, 2026 (Friday)</p>
-              <p>Eligibility: All departments, series 20-24</p>
-              <a href="https://forms.gle/LMXuQvZLcMRRWJHA6" target="_blank" rel="noopener noreferrer">
-                Registration Link
-              </a>
+            <article className="eventCard hackCard">
+              <div className="eventHeader">
+                <p className="eventTag">Hackathon</p>
+                <p className="eventDate">1 May, 2026 | Friday</p>
+              </div>
+              <h3>HackSpark</h3>
+              <ul>
+                <li>Open for all departments, series 20-24</li>
+                <li>Team size: up to 3 members</li>
+                <li>Prototype and pitch problem-solving ideas</li>
+              </ul>
+              <div className="eventActions">
+                <a className="btnMini" href="https://forms.gle/LMXuQvZLcMRRWJHA6" target="_blank" rel="noopener noreferrer">
+                  Register
+                </a>
+                <a
+                  className="btnMiniGhost"
+                  href="https://drive.google.com/file/d/1jb5QxWS96kKgWUMVrtelXgTg8U7MsiEc/view?fbclid=IwY2xjawRVmAlleHRuA2FlbQIxMABicmlkETE3RGVyS3lRMXVSbDdKejR4c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHiefmkeLDWV2pUti3o1WB1n1zF3Yn7Ibl_pvBF22HGugT_oRpry-KtgjOunE_aem_Jl7fAuTB_QDuOIqsos-w_g"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Rulebook
+                </a>
+              </div>
             </article>
+          </div>
+
+          <div className="benefitStrip" aria-label="Participant inclusions">
+            <span>T-shirt</span>
+            <span>Certificate</span>
+            <span>Snacks & Lunch</span>
+            <span>10% Callisto Coupon</span>
+            <span>Crest & Trophy for Winners</span>
           </div>
         </section>
 
