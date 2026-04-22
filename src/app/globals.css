@@ -786,6 +786,25 @@ section {
   color: var(--color-text-dim);
 }
 
+.updatesSection {
+  border-color: rgba(255, 200, 87, 0.5);
+  background: linear-gradient(150deg, rgba(10, 88, 94, 0.9), rgba(6, 58, 62, 0.9));
+}
+
+.updateLabel {
+  color: var(--color-hot);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.updateActions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .siteFooter {
   width: min(1120px, 92vw);
   margin: 24px auto 40px;
@@ -1139,7 +1158,8 @@ button:focus-visible {
   }
 
   .heroCtaRow a,
-  .eventActions a {
+  .eventActions a,
+  .updateActions a {
     width: 100%;
   }
 

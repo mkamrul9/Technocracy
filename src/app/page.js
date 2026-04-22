@@ -6,6 +6,8 @@ const CODE_REGISTRATION_LINK = "https://forms.gle/xhghADXrngrKxhUCA";
 const HACK_REGISTRATION_LINK = "https://forms.gle/LMXuQvZLcMRRWJHA6";
 const CODE_RULEBOOK_LINK = "https://drive.google.com/file/d/193Eb3jryGxNZusZviioP112IHe-4H-fX/view";
 const HACK_RULEBOOK_LINK = "https://drive.google.com/file/d/1jb5QxWS96kKgWUMVrtelXgTg8U7MsiEc/view";
+const FACEBOOK_PAGE_LINK = "https://www.facebook.com/technocracyece";
+const FACEBOOK_EVENT_LINK = "https://www.facebook.com/events/2015645729337938/";
 const SITE_URL = "https://technocracy2026.vercel.app";
 
 function getDaysLeft(deadlineIso) {
@@ -355,6 +357,22 @@ export default function Home() {
               <h3>What does each participant get?</h3>
               <p>Participation certificate, official event t-shirt, snacks and lunch, and a 10% Callisto discount coupon.</p>
             </article>
+          </div>
+        </section>
+
+        <section id="updates" className="sectionBlock updatesSection" data-reveal>
+          <p className="updateLabel">Stay Connected</p>
+          <h2>For More Update Visit Our Page</h2>
+          <p className="sectionLead">
+            Get all live updates, notices, and post-event highlights on our official Facebook channels.
+          </p>
+          <div className="updateActions">
+            <a className="btnPrimary" href={FACEBOOK_PAGE_LINK} target="_blank" rel="noopener noreferrer">
+              Visit Technocracy Page
+            </a>
+            <a className="btnGhost" href={FACEBOOK_EVENT_LINK} target="_blank" rel="noopener noreferrer">
+              Open Event Link
+            </a>
           </div>
         </section>
       </main>
