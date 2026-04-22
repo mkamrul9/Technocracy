@@ -1,17 +1,19 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-bg-deep: #003f43;
+  --color-bg-mid: #005a60;
+  --color-surface: #0b4b4f;
+  --color-surface-soft: #0f6166;
+  --color-text: #f2f8f8;
+  --color-text-dim: #cde4e4;
+  --color-accent: #18e4ea;
+  --color-accent-strong: #00c7d2;
+  --color-outline: rgba(24, 228, 234, 0.45);
+  --gradient-main: linear-gradient(145deg, #003b40 0%, #005a60 54%, #00696f 100%);
 }
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -24,9 +26,11 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-text);
+  background: radial-gradient(circle at 15% 20%, rgba(24, 228, 234, 0.18), transparent 24%),
+    radial-gradient(circle at 85% 78%, rgba(24, 228, 234, 0.14), transparent 20%),
+    var(--gradient-main);
+  font-family: var(--font-rajdhani), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,8 +46,183 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-orbitron), sans-serif;
+  letter-spacing: 0.04em;
+}
+
+main {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+.topNav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 62, 67, 0.78);
+  border-bottom: 1px solid rgba(24, 228, 234, 0.25);
+}
+
+.topNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 4vw;
+}
+
+.brand {
+  font-family: var(--font-orbitron), sans-serif;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.navLinks a {
+  color: var(--color-text-dim);
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.navLinks a:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.sectionBlock {
+  margin: 52px 0;
+  padding: 26px;
+  border-radius: 22px;
+  border: 1px solid rgba(24, 228, 234, 0.22);
+  background: linear-gradient(160deg, rgba(9, 81, 87, 0.78), rgba(5, 58, 62, 0.76));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.hero {
+  margin-top: 42px;
+  text-align: center;
+}
+
+.kicker {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin-top: 10px;
+  font-size: clamp(2.4rem, 7vw, 4.4rem);
+  line-height: 1.02;
+}
+
+.heroSub {
+  width: min(760px, 100%);
+  margin: 18px auto 0;
+  color: var(--color-text-dim);
+  font-size: 1.18rem;
+}
+
+.heroCtaRow {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary,
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.btnPrimary {
+  color: #002e32;
+  background: linear-gradient(120deg, #5dfaff, #18e4ea);
+}
+
+.btnGhost {
+  color: var(--color-text);
+  border: 1px solid var(--color-outline);
+}
+
+.sectionLead {
+  margin-top: 10px;
+  color: var(--color-text-dim);
+}
+
+.cardGrid {
+  margin-top: 20px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.infoCard {
+  background: rgba(3, 51, 55, 0.72);
+  border: 1px solid rgba(24, 228, 234, 0.2);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.infoCard h3 {
+  font-size: 1.12rem;
+}
+
+.infoCard p,
+.infoCard li,
+.infoCard a {
+  margin-top: 10px;
+  color: var(--color-text-dim);
+  line-height: 1.45;
+}
+
+.infoCard ul {
+  list-style-position: inside;
+}
+
+.infoCard a {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.singleCard {
+  margin-top: 18px;
+}
+
+@media (max-width: 700px) {
+  .topNav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sectionBlock {
+    padding: 20px;
   }
 }
