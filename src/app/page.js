@@ -1,3 +1,5 @@
+import NoticePopup from "@/components/NoticePopup";
+
 const REGISTRATION_DEADLINE = "2026-04-24T23:59:59+06:00";
 const CODE_REGISTRATION_LINK = "https://forms.gle/xhghADXrngrKxhUCA";
 const HACK_REGISTRATION_LINK = "https://forms.gle/LMXuQvZLcMRRWJHA6";
@@ -65,6 +67,7 @@ export default function Home() {
 
   return (
     <>
+      <NoticePopup registrationHref="#events" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <div className="ambientBackdrop" aria-hidden="true">
         <span className="glow glowOne" />
@@ -84,6 +87,7 @@ export default function Home() {
           <a href="#faq">FAQ</a>
         </nav>
       </header>
+      <div className="navSpacer" aria-hidden="true" />
 
       <main id="main-content">
         <section id="home" className="hero sectionBlock" data-reveal>
@@ -363,6 +367,21 @@ export default function Home() {
           <a href="#home">Back to top</a>
         </div>
       </footer>
+
+      <div className="floatingActions" aria-label="Quick actions">
+        <a className="floatingBtn topBtn" href="#home" aria-label="Back to top">
+          Top
+        </a>
+        <a
+          className="floatingBtn msgBtn"
+          href="https://m.me/technocracyece"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Message us on Facebook"
+        >
+          Chat
+        </a>
+      </div>
     </>
   );
 }
