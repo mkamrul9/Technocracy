@@ -1,4 +1,5 @@
 import NoticePopup from "@/components/NoticePopup";
+import QuickActions from "@/components/QuickActions";
 
 const REGISTRATION_DEADLINE = "2026-04-24T23:59:59+06:00";
 const CODE_REGISTRATION_LINK = "https://forms.gle/xhghADXrngrKxhUCA";
@@ -88,6 +89,35 @@ export default function Home() {
         </nav>
       </header>
       <div className="navSpacer" aria-hidden="true" />
+      <section className="newsTickerWrap" aria-label="Latest Technocracy news">
+        <div className="newsTickerTrack">
+          <span className="newsItem">
+            IMPORTANT: Only <strong>3 days left</strong> for registration.
+          </span>
+          <span className="newsItem">
+            UPDATE: All-girls member teams can have <strong>up to 4 members</strong>.
+          </span>
+          <span className="newsItem">
+            DATE: <strong>30 April</strong> - Code Kachal Programming Contest.
+          </span>
+          <span className="newsItem">
+            DATE: <strong>1 May</strong> - HackSpark Hackathon Day.
+          </span>
+
+          <span className="newsItem">
+            IMPORTANT: Only <strong>3 days left</strong> for registration.
+          </span>
+          <span className="newsItem">
+            UPDATE: All-girls member teams can have <strong>up to 4 members</strong>.
+          </span>
+          <span className="newsItem">
+            DATE: <strong>30 April</strong> - Code Kachal Programming Contest.
+          </span>
+          <span className="newsItem">
+            DATE: <strong>1 May</strong> - HackSpark Hackathon Day.
+          </span>
+        </div>
+      </section>
 
       <main id="main-content">
         <section id="home" className="hero sectionBlock" data-reveal>
@@ -368,20 +398,7 @@ export default function Home() {
         </div>
       </footer>
 
-      <div className="floatingActions" aria-label="Quick actions">
-        <a className="floatingBtn topBtn" href="#home" aria-label="Back to top">
-          Top
-        </a>
-        <a
-          className="floatingBtn msgBtn"
-          href="https://m.me/technocracyece"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Message us on Facebook"
-        >
-          Chat
-        </a>
-      </div>
+      <QuickActions />
     </>
   );
 }

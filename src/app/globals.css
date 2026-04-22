@@ -169,7 +169,36 @@ section {
 }
 
 .navSpacer {
-  height: 72px;
+  height: 114px;
+}
+
+.newsTickerWrap {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 200, 87, 0.48);
+  border-bottom: 1px solid rgba(255, 200, 87, 0.48);
+  background: linear-gradient(90deg, rgba(7, 60, 65, 0.95), rgba(12, 86, 92, 0.95));
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.newsTickerTrack {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 8px;
+  animation: tickerLTR 26s linear infinite;
+}
+
+.newsItem {
+  color: #ecffff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.newsItem strong {
+  color: var(--color-hot);
 }
 
 .noticeOverlay {
@@ -230,6 +259,67 @@ section {
 
 .noticeClose:hover {
   border-color: rgba(31, 245, 255, 0.9);
+}
+
+.contactOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(0, 22, 25, 0.62);
+  backdrop-filter: blur(4px);
+}
+
+.contactCard {
+  width: min(460px, 100%);
+  border-radius: 18px;
+  border: 1px solid rgba(31, 245, 255, 0.44);
+  background: linear-gradient(152deg, rgba(5, 74, 80, 0.96), rgba(6, 45, 50, 0.95));
+  padding: 20px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
+}
+
+.contactCard h3 {
+  margin-top: 6px;
+  font-size: 1.32rem;
+}
+
+.contactCard p {
+  margin-top: 10px;
+  color: var(--color-text-dim);
+}
+
+.contactActions {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.messengerBtn {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(31, 245, 255, 0.6);
+  background: linear-gradient(120deg, #0b8f9a, #00b7c6);
+  color: #f6ffff;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.messengerIcon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .brand {
@@ -803,6 +893,16 @@ section {
   color: var(--color-accent);
 }
 
+@keyframes tickerLTR {
+  0% {
+    transform: translateX(-55%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 @keyframes floatPulse {
   0% {
     transform: translateY(0);
@@ -932,7 +1032,7 @@ button:focus-visible {
   }
 
   .navSpacer {
-    height: 92px;
+    height: 132px;
   }
 
   .brand {
@@ -981,7 +1081,16 @@ button:focus-visible {
   }
 
   .navSpacer {
-    height: 112px;
+    height: 156px;
+  }
+
+  .newsTickerTrack {
+    gap: 14px;
+    padding: 8px 6px;
+  }
+
+  .newsItem {
+    font-size: 0.84rem;
   }
 
   .navLinks {
@@ -1095,6 +1204,19 @@ button:focus-visible {
 
   .noticeActions a,
   .noticeClose {
+    width: 100%;
+  }
+
+  .contactCard {
+    padding: 16px;
+  }
+
+  .contactActions {
+    flex-direction: column;
+  }
+
+  .contactActions a,
+  .contactActions button {
     width: 100%;
   }
 }
