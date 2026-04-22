@@ -1,4 +1,5 @@
 import { Orbitron, Rajdhani } from "next/font/google";
+import ScrollReveal from "@/components/ScrollReveal";
 import "./globals.css";
 
 const orbitron = Orbitron({
@@ -21,7 +22,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${orbitron.variable} ${rajdhani.variable}`}>
-      <body>{children}</body>
+      <body>
+        <a className="skipLink" href="#main-content">
+          Skip to content
+        </a>
+        <ScrollReveal />
+        {children}
+      </body>
     </html>
   );
 }

@@ -31,13 +31,13 @@ export default function Home() {
         </nav>
       </header>
 
-      <main>
-        <section id="home" className="hero sectionBlock">
+      <main id="main-content">
+        <section id="home" className="hero sectionBlock" data-reveal>
           <div className="binaryRain" aria-hidden="true">
             010101 001101 111000 100101 001011 010110 110010 000111 101001 011100
           </div>
           <div className="heroGrid">
-            <div className="heroCopy">
+            <div className="heroCopy" data-reveal>
               <p className="kicker">ECE Presents</p>
               <h1>
                 TECHNOC<span>RACY</span> 2026
@@ -63,7 +63,7 @@ export default function Home() {
               </div>
             </div>
 
-            <aside className="countdownCard" aria-label="Registration countdown">
+            <aside className="countdownCard" aria-label="Registration countdown" data-reveal>
               <p className="countLabel">Only</p>
               <p className="countNumber">{daysLeft}</p>
               <p className="countLabel">Days Left</p>
@@ -72,12 +72,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="events" className="sectionBlock">
+        <section id="events" className="sectionBlock" data-reveal>
           <h2>Competition Tracks</h2>
           <p className="sectionLead">Two events, one platform. Join a focused coding contest or ship solutions in a full hackathon sprint.</p>
 
           <div className="eventGrid">
-            <article className="eventCard codeCard">
+            <article className="eventCard codeCard" data-reveal>
               <div className="eventHeader">
                 <p className="eventTag">Programming Contest</p>
                 <p className="eventDate">30 April, 2026 | Thursday</p>
@@ -103,7 +103,7 @@ export default function Home() {
               </div>
             </article>
 
-            <article className="eventCard hackCard">
+            <article className="eventCard hackCard" data-reveal>
               <div className="eventHeader">
                 <p className="eventTag">Hackathon</p>
                 <p className="eventDate">1 May, 2026 | Friday</p>
@@ -130,7 +130,7 @@ export default function Home() {
             </article>
           </div>
 
-          <div className="benefitStrip" aria-label="Participant inclusions">
+          <div className="benefitStrip" aria-label="Participant inclusions" data-reveal>
             <span>T-shirt</span>
             <span>Certificate</span>
             <span>Snacks & Lunch</span>
@@ -139,30 +139,30 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="schedule" className="sectionBlock">
+        <section id="schedule" className="sectionBlock" data-reveal>
           <h2>Time & Registration</h2>
           <p className="sectionLead">Important milestones to keep your team registration and preparation on track.</p>
 
           <div className="timelineGrid">
-            <article className="timelineCard">
+            <article className="timelineCard" data-reveal>
               <p className="timelineDate">24 April, 2026</p>
               <h3>Registration Deadline</h3>
               <p>Final date to submit team registration for both events.</p>
             </article>
 
-            <article className="timelineCard">
+            <article className="timelineCard" data-reveal>
               <p className="timelineDate">30 April, 2026 | Thursday</p>
               <h3>Code Kachal Contest Day</h3>
               <p>Intra RUET programming contest for series 21-24 from all departments.</p>
             </article>
 
-            <article className="timelineCard">
+            <article className="timelineCard" data-reveal>
               <p className="timelineDate">1 May, 2026 | Friday</p>
               <h3>HackSpark Main Day</h3>
               <p>Hackathon project sprint, evaluation, and winner selection.</p>
             </article>
 
-            <article className="timelineCard">
+            <article className="timelineCard" data-reveal>
               <p className="timelineDate">Team Policy</p>
               <h3>Team Size & Fee</h3>
               <p>Up to 3 members per team. Registration fee is 900 BDT per team.</p>
@@ -170,10 +170,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="rulebooks" className="sectionBlock">
+        <section id="rulebooks" className="sectionBlock" data-reveal>
           <h2>Rulebooks</h2>
           <div className="cardGrid">
-            <article className="infoCard">
+            <article className="infoCard" data-reveal>
               <h3>Code Kachal Rulebook</h3>
               <a
                 href="https://drive.google.com/file/d/193Eb3jryGxNZusZviioP112IHe-4H-fX/view?fbclid=IwY2xjawRVl9FleHRuA2FlbQIxMABicmlkETFvVDI4YUVsNjZIMVdlSHNxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHrn6muQKq1Yf_qQxfUaCi5y_iRbhkFOoRoJ_hOn9vZn_lmJ5lMiccxfFhzOA_aem_HXRM-lsEXqs5kGnLKMOAAg"
@@ -183,7 +183,7 @@ export default function Home() {
                 Open Rulebook
               </a>
             </article>
-            <article className="infoCard">
+            <article className="infoCard" data-reveal>
               <h3>HackSpark Rulebook</h3>
               <a
                 href="https://drive.google.com/file/d/1jb5QxWS96kKgWUMVrtelXgTg8U7MsiEc/view?fbclid=IwY2xjawRVmAlleHRuA2FlbQIxMABicmlkETE3RGVyS3lRMXVSbDdKejR4c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHiefmkeLDWV2pUti3o1WB1n1zF3Yn7Ibl_pvBF22HGugT_oRpry-KtgjOunE_aem_Jl7fAuTB_QDuOIqsos-w_g"
@@ -196,10 +196,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="kits" className="sectionBlock">
+        <section id="kits" className="sectionBlock" data-reveal>
           <h2>Prize & Participant Kits</h2>
           <div className="cardGrid">
-            <article className="infoCard">
+            <article className="infoCard" data-reveal>
               <h3>For Each Participant</h3>
               <ul>
                 <li>Participation certificate</li>
@@ -208,18 +208,18 @@ export default function Home() {
                 <li>10% discount coupon from Callisto</li>
               </ul>
             </article>
-            <article className="infoCard">
+            <article className="infoCard" data-reveal>
               <h3>For Winning Teams</h3>
               <p>Crests and trophies for champion teams.</p>
             </article>
           </div>
         </section>
 
-        <section id="venue" className="sectionBlock">
+        <section id="venue" className="sectionBlock" data-reveal>
           <h2>Place & Contact</h2>
 
           <div className="venueGrid">
-            <article className="infoCard singleCard">
+            <article className="infoCard singleCard" data-reveal>
               <h3>Venue</h3>
               <p>Rajshahi University of Engineering & Technology (RUET), Rajshahi.</p>
               <p>Specific room-wise seating and reporting points will be announced by organizers before event day.</p>
@@ -228,7 +228,7 @@ export default function Home() {
               </a>
             </article>
 
-            <article className="infoCard singleCard">
+            <article className="infoCard singleCard" data-reveal>
               <h3>Organizer Desk</h3>
               <p>For registration support and event communication, contact the ECE Technocracy organizing panel.</p>
               <p>Official contact numbers and helpdesk links will be published soon.</p>
@@ -237,25 +237,25 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" className="sectionBlock">
+        <section id="faq" className="sectionBlock" data-reveal>
           <h2>FAQ</h2>
           <div className="faqGrid">
-            <article className="faqCard">
+            <article className="faqCard" data-reveal>
               <h3>Can I join both events?</h3>
               <p>Yes. You can register for Code Kachal, HackSpark, or both if your team meets eligibility requirements.</p>
             </article>
 
-            <article className="faqCard">
+            <article className="faqCard" data-reveal>
               <h3>Who can participate?</h3>
               <p>Code Kachal is for all departments, series 21-24. HackSpark is for all departments, series 20-24.</p>
             </article>
 
-            <article className="faqCard">
+            <article className="faqCard" data-reveal>
               <h3>How many members are allowed?</h3>
               <p>Each team can have up to 3 members.</p>
             </article>
 
-            <article className="faqCard">
+            <article className="faqCard" data-reveal>
               <h3>What does each participant get?</h3>
               <p>Participation certificate, official event t-shirt, snacks and lunch, and a 10% Callisto discount coupon.</p>
             </article>
