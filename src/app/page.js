@@ -1,5 +1,6 @@
 import NoticePopup from "@/components/NoticePopup";
 import QuickActions from "@/components/QuickActions";
+import Navbar from "@/components/Navbar";
 
 const REGISTRATION_DEADLINE = "2026-04-24T23:59:59+06:00";
 const CODE_REGISTRATION_LINK = "https://forms.gle/xhghADXrngrKxhUCA";
@@ -77,19 +78,7 @@ export default function Home() {
         <span className="glow glowTwo" />
         <span className="glow glowThree" />
       </div>
-      <header className="topNav">
-        <a href="#home" className="brand">
-          Technocracy 2026
-        </a>
-        <nav className="navLinks" aria-label="Main navigation">
-          <a href="#events">Events</a>
-          <a href="#schedule">Schedule</a>
-          <a href="#rulebooks">Rulebooks</a>
-          <a href="#kits">Prize & Kits</a>
-          <a href="#venue">Venue</a>
-          <a href="#faq">FAQ</a>
-        </nav>
-      </header>
+      <Navbar />
       <div className="navSpacer" aria-hidden="true" />
       <section className="newsTickerWrap" aria-label="Latest Technocracy news">
         <div className="newsTickerTrack">
