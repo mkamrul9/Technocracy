@@ -18,7 +18,7 @@ export default function NoticePopup({ registrationHref }) {
                     All girls member teams can have a maximum of 4 members for Technocracy events.
                 </p>
                 <div className="noticeActions">
-                    <a className="btnPrimary" href={registrationHref}>
+                    <a className="btnPrimary" href={registrationHref} onClick={() => setIsOpen(false)}>
                         Registration
                     </a>
                     <button type="button" className="noticeClose" onClick={() => setIsOpen(false)}>

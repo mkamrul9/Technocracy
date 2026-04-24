@@ -83,7 +83,7 @@ export default function Home() {
       <section className="newsTickerWrap" aria-label="Latest Technocracy news">
         <div className="newsTickerTrack">
           <span className="newsItem">
-            IMPORTANT: Only <strong>3 days left</strong> for registration.
+            IMPORTANT: Only <strong>1 days left</strong> for registration.
           </span>
           <span className="newsItem">
             UPDATE: All-girls member teams can have <strong>up to 4 members</strong>.
