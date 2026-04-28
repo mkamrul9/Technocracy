@@ -3,13 +3,13 @@
 import { useState } from "react";
 
 const navItems = [
-    { href: "#events", label: "Events" },
-    { href: "#schedule", label: "Schedule" },
-    { href: "#rulebooks", label: "Rulebooks" },
-    { href: "#kits", label: "Prize & Kits" },
-    { href: "#teams", label: "Teams" },
-    { href: "#venue", label: "Venue" },
-    { href: "#faq", label: "FAQ" },
+    { href: "/#events", label: "Events" },
+    { href: "/#schedule", label: "Schedule" },
+    { href: "/#rulebooks", label: "Rulebooks" },
+    { href: "/#kits", label: "Prize & Kits" },
+    { href: "/teams", label: "Teams" },
+    { href: "/#venue", label: "Venue" },
+    { href: "/#faq", label: "FAQ" },
 ];
 
 export default function Navbar() {
@@ -18,7 +18,7 @@ export default function Navbar() {
     return (
         <header className="topNav">
             <div className="topNavInner">
-                <a href="#home" className="brand" onClick={() => setIsOpen(false)}>
+                <a href="/" className="brand" onClick={() => setIsOpen(false)}>
                     Technocracy 2026
                 </a>
 

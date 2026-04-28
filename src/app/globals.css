@@ -920,6 +920,54 @@ section {
   position: relative;
 }
 
+.teamsTabs {
+  margin-top: 22px;
+  display: grid;
+  gap: 20px;
+}
+
+.tabHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tabButtons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tabButton {
+  border-radius: 999px;
+  padding: 8px 16px;
+  border: 1px solid rgba(24, 228, 234, 0.45);
+  background: rgba(4, 62, 67, 0.72);
+  color: var(--color-text);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.tabButton.active {
+  border-color: rgba(255, 200, 87, 0.7);
+  color: #fff3d6;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.tabButton:hover {
+  transform: translateY(-1px);
+  border-color: rgba(24, 228, 234, 0.75);
+}
+
+.teamsPanel {
+  display: grid;
+  gap: 18px;
+}
+
 .teamGroupHeader {
   display: flex;
   align-items: center;
@@ -946,6 +994,37 @@ section {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.teamOverviewGrid {
+  margin-top: 18px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.teamOverviewCard {
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(24, 228, 234, 0.24);
+  background: rgba(3, 51, 55, 0.72);
+  transition: transform 170ms ease, border-color 170ms ease;
+}
+
+.teamOverviewCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(24, 228, 234, 0.5);
+}
+
+.teamOverviewCard h3 {
+  margin-top: 8px;
+  font-size: 1.4rem;
+}
+
+.teamOverviewCta {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .teamCard {
@@ -1450,6 +1529,19 @@ button:focus-visible {
     align-items: flex-start;
   }
 
+  .tabHeader {
+    align-items: stretch;
+  }
+
+  .tabButtons {
+    width: 100%;
+  }
+
+  .tabButton {
+    width: 100%;
+    text-align: center;
+  }
+
   .teamSummary {
     width: 100%;
   }
@@ -1461,6 +1553,14 @@ button:focus-visible {
 
   .teamGrid {
     grid-template-columns: 1fr;
+  }
+
+  .teamOverviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .teamOverviewCta a {
+    width: 100%;
   }
 
   .eventCard,
