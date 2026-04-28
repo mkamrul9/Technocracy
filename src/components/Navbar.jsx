@@ -7,6 +7,7 @@ const navItems = [
     { href: "#schedule", label: "Schedule" },
     { href: "#rulebooks", label: "Rulebooks" },
     { href: "#kits", label: "Prize & Kits" },
+    { href: "#teams", label: "Teams" },
     { href: "#venue", label: "Venue" },
     { href: "#faq", label: "FAQ" },
 ];
